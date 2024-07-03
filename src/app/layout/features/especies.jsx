@@ -36,8 +36,8 @@ const EspeciesComponent = () => {
           Sistema Clasificador de Atunes                   
         </Menu.Item>
         <Icon
-            name="accusoft"
-            style={{ fontSize: '40px', color: '#f9fafb' , marginLeft: '900px' , marginTop: '18px'}}
+            name="home"
+            style={{ fontSize: '37px', color: '#f9fafb' , marginLeft: '860px' , marginTop: '18px'}}
             onClick={handleIconClick}
         />
         </Menu>

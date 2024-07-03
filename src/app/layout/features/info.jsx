@@ -176,8 +176,8 @@ const InfoComponent = () => {
               </Button>
             </ModalActions>
           </Modal>
-          <Icon name="accusoft" 
-          style={{ fontSize: '40px', color: '#f9fafb', marginLeft: '40px', marginTop: '20px' }}
+          <Icon name="home" 
+          style={{ fontSize: '37px', color: '#f9fafb', marginLeft: '40px', marginTop: '20px' }}
           onClick={handleIconClick}
 
            />

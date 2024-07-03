@@ -25,7 +25,7 @@ function BarrileteComponent() {
       <Modal onClose={handleClose} open={open}>
         <ModalHeader>Katsuwonus Pelamis</ModalHeader>
         <ModalContent image>
-          <Image size='massive' src='/atun/infoespecies/barrilete.png' wrapped />
+          <Image size='massive' src='/atun/infoespecies/barriletedos.jpg' wrapped />
           <ModalDescription>
             <Header>Nombre Común: Barrilete</Header>
             <ol>

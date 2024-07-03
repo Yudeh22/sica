@@ -1,73 +1,3 @@
-// import React, { useState } from "react";
-// import { Header, Container } from "semantic-ui-react";
-// import Preview from "./features/Preview";
-// import SearchBox from "./features/SearchBox";
-// import SideExample from "./features/SideExample";
-
-// const ImagePredictionDashBoard = () => {
-//   const [searchState, setSearchState] = useState("");
-//   return (
-//     <>
-//       <SideExample />
-//       <Container style={{ marginLeft: "240px", paddingTop: "20px" }}>
-//         <Header as={"h1"}>Sistema Clasificador de Atunes</Header>
-//         <SearchBox setSearchState={setSearchState} />
-//         <Preview searchState={searchState} />
-//       </Container>
-//     </>
-//   );
-// };
-
-// export default ImagePredictionDashBoard;
-
-
-
-
-
-// import React, { useState } from "react";
-// import { Header, Container, Sidebar, Menu, Icon } from "semantic-ui-react";
-// import Preview from "./features/Preview";
-// import SearchBox from "./features/SearchBox";
-// import CustomSidebar from "./features/SideExample";
-
-
-// const ImagePredictionDashBoard = () => {
-//   const [searchState, setSearchState] = useState("");
-//   const [sidebarVisible, setSidebarVisible] = useState(false);
-
-//   const handleSidebarToggle = () => {
-//     setSidebarVisible(!sidebarVisible);
-//   };
-
-//   return (
-//     <Sidebar.Pushable style={{ minHeight: "100vh" }}>
-//       <CustomSidebar visible={sidebarVisible} onHide={() => setSidebarVisible(false)} />
-//       <Sidebar.Pusher dimmed={sidebarVisible}>
-//         <Menu fixed="top" style={{ backgroundColor: "#14539A", borderBottom: "5px solid #14539A" }}>
-//         <Menu.Item onClick={handleSidebarToggle} style={{ fontSize: '20px', color: '#f9fafb' }}>
-//           <Icon name="sidebar" style={{ color: "#f9fafb" }} />
-//           Sistema Clasificador de Atunes                 
-//         </Menu.Item>
-//         <Icon 
-//           name="accusoft"
-//           style={{ fontSize: '40px', color: '#f9fafb' , marginLeft: '900px' , marginTop: '18px'}}
-//           />
-//         </Menu>
-//         <Container style={{ marginLeft: "20px" }}>
-//           <br/><br/> <br/><br/>
-//           <Header as={"h1"}>Clasificación por Imagen</Header>
-//           <SearchBox setSearchState={setSearchState} />
-//           <Preview searchState={searchState}></Preview>
-//         </Container>
-//       </Sidebar.Pusher>
-//     </Sidebar.Pushable>
-    
-//   );
-// };
-
-// export default ImagePredictionDashBoard;
-
-
 import React, { useState } from "react";
 import { Header, Container, Sidebar, Menu, Icon, Button, Modal, ModalHeader, ModalContent, ModalDescription, ModalActions } from "semantic-ui-react";
 import Preview from "./features/Preview";
@@ -110,7 +40,7 @@ const ImagePredictionDashBoard = () => {
               </Button>
             </ModalActions>
           </Modal>
-          <Icon name="accusoft" style={{ fontSize: '40px', color: '#f9fafb', marginLeft: '40px', marginTop: '20px' }} />
+          <Icon name="home" style={{ fontSize: '37px', color: '#f9fafb', marginLeft: '40px', marginTop: '20px' }} />
         </Menu>
         <Container style={{ marginLeft: "20px" }}>
           <br /><br />

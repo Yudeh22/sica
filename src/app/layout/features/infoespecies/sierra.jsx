@@ -25,7 +25,7 @@ function SierraComponent() {
       <Modal onClose={handleClose} open={open}>
         <ModalHeader>Scombrerimorus Sierra</ModalHeader>
         <ModalContent image>
-          <Image size='massive' src='/atun/infoespecies/sierra.png' wrapped />
+          <Image size='massive' src='/atun/infoespecies/sierrados.jpg' wrapped />
           <ModalDescription>
             <Header>Nombre Común: Sierra</Header>
             <ol>

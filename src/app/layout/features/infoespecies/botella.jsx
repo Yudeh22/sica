@@ -25,7 +25,7 @@ function BotellaComponent() {
       <Modal onClose={handleClose} open={open}>
         <ModalHeader>Auxis Thazard Brachydorax</ModalHeader>
         <ModalContent image>
-          <Image size='massive' src='/atun/infoespecies/botella.png' wrapped />
+          <Image size='massive' src='/atun/infoespecies/botellados.jpg' wrapped />
           <ModalDescription>
             <Header>Nombre Común: Botella Grande</Header>
             <ol>

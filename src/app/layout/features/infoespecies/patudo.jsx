@@ -25,7 +25,7 @@ function PatudoComponent() {
       <Modal onClose={handleClose} open={open}>
         <ModalHeader>Thunus Obesus</ModalHeader>
         <ModalContent image>
-          <Image size='massive' src='/atun/infoespecies/patudo.png' wrapped />
+          <Image size='massive' src='/atun/infoespecies/patudodos.jpg' wrapped />
           <ModalDescription>
             <Header>Nombre Común: Patudo</Header>
             <ol>

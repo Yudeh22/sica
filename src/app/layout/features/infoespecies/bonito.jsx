@@ -25,7 +25,7 @@ function BonitoComponent() {
       <Modal onClose={handleClose} open={open}>
         <ModalHeader>Sarda Orientalis</ModalHeader>
         <ModalContent image>
-          <Image size='massive' src='/atun/infoespecies/bonito.png' wrapped />
+          <Image size='massive' src='/atun/infoespecies/bonitodos.jpg' wrapped />
           <ModalDescription>
             <Header>Nombre Común: Bonito</Header>
             <ol>

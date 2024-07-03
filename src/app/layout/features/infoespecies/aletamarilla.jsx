@@ -25,7 +25,7 @@ function AletaComponent() {
       <Modal onClose={handleClose} open={open}>
         <ModalHeader>Thunus Albacares</ModalHeader>
         <ModalContent image>
-          <Image size='massive' src='/atun/infoespecies/aletamarilla.png' wrapped />
+          <Image size='massive' src='/atun/infoespecies/amarillados.jpg' wrapped />
           <ModalDescription>
             <Header>Nombre Común: Aleta Amarilla</Header>
             <ol>

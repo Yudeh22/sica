@@ -25,7 +25,7 @@ function PatasecaComponent() {
       <Modal onClose={handleClose} open={open}>
         <ModalHeader>Euthynnus Lineatus</ModalHeader>
         <ModalContent image>
-          <Image size='massive' src='/atun/infoespecies/pataseca.png' wrapped />
+          <Image size='massive' src='/atun/infoespecies/patasecados.jpg' wrapped />
           <ModalDescription>
             <Header>Nombre Común: PataSeca</Header>
             <ol>

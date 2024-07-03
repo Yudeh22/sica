@@ -24,7 +24,7 @@ function WahooComponent({ onClose }) {
       <Modal onClose={handleClose} open={open}>
         <ModalHeader>Acanthocybium  Solandri</ModalHeader>
         <ModalContent image>
-          <Image size='massive' src='/atun/infoespecies/wahooo.png' wrapped />
+          <Image size='massive' src='/atun/infoespecies/wahoo2.jpg' wrapped />
           <ModalDescription>
             <Header>Nombre Común: Wahoo</Header>
             <ol>

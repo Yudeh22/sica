@@ -24,12 +24,12 @@ const ImagePredictionDashBoard = () => {
           <Modal onClose={() => setOpen(false)} onOpen={() => setOpen(true)} open={open} trigger={<Button style={{ marginLeft: '700px',marginTop: '11px', backgroundColor: 'red', height: '40px', padding: '10px' }}><Icon name="file video" /> Guia de Uso</Button>}>
             <ModalHeader>Video Tutorial</ModalHeader>
             <ModalContent>
-              <iframe width="580" height="335" src="https://www.youtube.com/embed/rZBflK0UJyE?si=uI9wQhMi_zLX8jVc" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+              <iframe width="580" height="335" src="https://www.youtube.com/embed/IPPMUAQmKnY?si=RSOYkKjzp7S1FyW6" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
               <ModalDescription>
                 <br/>
                 <h3>Manual de Usuario</h3>
                 <p>
-                  Para leer el manual de usuario haz <a href="https://uleam-my.sharepoint.com/:b:/g/personal/e1315259398_live_uleam_edu_ec/EXt9taYsPFdNnOyK08BqL8wBYNUmkCQIRDVe1qzyw7DgKQ?e=cCDMlf" target="_blank" rel="noopener noreferrer"> clic aquí.</a>
+                  Para leer el manual de usuario haz <a href="https://sica.yudeh.com/" target="_blank" rel="noopener noreferrer"> clic aquí.</a>
                 </p>
               </ModalDescription>
             </ModalContent>

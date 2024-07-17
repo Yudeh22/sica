@@ -22,18 +22,26 @@
 
 //   const navigate = useNavigate();
 //   const handleIconClick = () => {
-//     navigate("/"); // Redirige al usuario a la ruta deseada
+//     navigate("/dashboard"); // Redirige al usuario a la ruta deseada
 //   };
 
 //   const toggleFreeze = () => {
-//     setFrozen(!frozen);
+//     if (cameraOpen) { // Verifica si la cámara está abierta
+//       setFrozen(!frozen);
+//     } else {
+//       alert("¡Imagen no disponible!"); // Muestra una alerta si la cámara está cerrada
+//     }
 //   };
 
 //   const closeCamera = () => {
-//     if (webcam) {
-//       webcam.stop();
-//       setCameraOpen(false);
-//       clearLabels(); // Limpiar etiquetas al cerrar la cámara
+//     try {
+//       if (webcam) {
+//         webcam.stop();
+//         setCameraOpen(false);
+//         clearLabels(); // Limpiar etiquetas al cerrar la cámara
+//       }
+//     } catch (error) {
+//       alert("¡La cámara se encuentra cerrada!"); // Mostrar alerta en caso de error
 //     }
 //   };
 
@@ -124,11 +132,11 @@
 //         <Menu fixed="top" style={{ backgroundColor: "#14539A", borderBottom: "5px solid #14539A" }}>
 //           <Menu.Item onClick={handleSidebarToggle} style={{ fontSize: '20px', color: '#f9fafb' }}>
 //             <Icon name="sidebar" style={{ color: "#f9fafb" }} />
-//             Menú - SCA
+//             Sistema Clasificador de Atunes
 //           </Menu.Item>
 //           <Icon
-//             name="accusoft"
-//             style={{ fontSize: '40px', color: '#f9fafb' , marginLeft: '1050px' , marginTop: '18px'}}
+//             name="home"
+//             style={{ fontSize: '37px', color: '#f9fafb' , marginLeft: '860px' , marginTop: '18px'}}
 //             onClick={handleIconClick}
 //           />
 //         </Menu>
@@ -149,19 +157,18 @@
 //         <Container style={{ marginTop: '10px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
 //           <Button  color= "green" onClick={refreshPage}>Abrir Cámara</Button>
 //           <Button color= "red" onClick={closeCamera}>Cerrar Cámara</Button>
-//           <Button color= "primary" onClick={toggleFreeze}>{frozen ? "Descongelar" : "Congelar"}</Button>
+//           <Button color= "blue" onClick={toggleFreeze}>{frozen ? "Descongelar" : "Congelar"}</Button>
 //         </Container>
 
 //         <Container style={{ marginTop: '20px'}}>
 //         <Message warning>
 //           <MessageHeader>A tener en cuenta!</MessageHeader>
-//           <br/>
-//           <p>♦ Para garantizar el mejor funcionamiento del sistema, se recomienda que si vas a salir del reconocimiento en vivo hacia otro apartado 
-//             debes cerrar previamente la camara web y no haber tenido congelada la cámara.
+//           <p>♦ La precisión del resultado del modelo va a depender en gran medida de la calidad de imágen (o fotografía) que le proporciones.
 //           </p>
-//           <p>♦ La presición del resultado del modelo va a depender mucho de la calidad de imagen que le proporciones.
+//           <p>♦ Si estas presentando inconvenientes siempre ten en consideración recargar la página (valido tambien para el reconocimiento por fotografía) o hacer clic en el boton Abrir Cámara.
 //           </p>
-//           <p>♦ Si estas presentando inconvenientes siempre ten en consideración recargar la página o hacer clic en el boton Abrir Cámara.
+//           <p>♦ Para garantizar el mejor funcionamiento del sistema, se recomienda recargar la página y oprimir el boton Cerrar Cámara en caso
+//             de querer salir del reconocimiento en vivo hacia otro apartado.
 //           </p>
 //         </Message>
 //         <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
@@ -173,21 +180,19 @@
 
 // export default EnvivoComponent;
 
-
 import React, { useState, useEffect, useRef } from "react";
 import { Header, Container, Sidebar, Menu, Icon, Button, MessageHeader, Message } from "semantic-ui-react";
 import CustomSidebar from "./SideExample";
 import * as tmImage from "@teachablemachine/image";
 import { useNavigate } from "react-router-dom";
-
+import Swal from 'sweetalert2';
 
 const EnvivoComponent = () => {
   const [sidebarVisible, setSidebarVisible] = useState(false);
   const [webcam, setWebcam] = useState(null);
   const [frozen, setFrozen] = useState(false);
   const [cameraOpen, setCameraOpen] = useState(true);
-  // const [model, setModel] = useState(null);
-  const [ ,setModel] = useState(null);
+  const [, setModel] = useState(null);
 
   const frozenCanvasRef = useRef(null);
   const labelContainerRef = useRef(null);
@@ -198,14 +203,18 @@ const EnvivoComponent = () => {
 
   const navigate = useNavigate();
   const handleIconClick = () => {
-    navigate("/dashboard"); // Redirige al usuario a la ruta deseada
+    navigate("/dashboard");
   };
 
   const toggleFreeze = () => {
-    if (cameraOpen) { // Verifica si la cámara está abierta
+    if (cameraOpen) {
       setFrozen(!frozen);
     } else {
-      alert("¡Imagen no disponible!"); // Muestra una alerta si la cámara está cerrada
+      Swal.fire({
+        icon: 'warning',
+        title: 'Imágen no disponible',
+        text: 'No es posible acceder a la imágen en este momento, asegurate de tener la cámara abierta',
+      });
     }
   };
 
@@ -214,16 +223,20 @@ const EnvivoComponent = () => {
       if (webcam) {
         webcam.stop();
         setCameraOpen(false);
-        clearLabels(); // Limpiar etiquetas al cerrar la cámara
+        clearLabels();
       }
     } catch (error) {
-      alert("¡La cámara se encuentra cerrada!"); // Mostrar alerta en caso de error
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: '¡La cámara ya se encuentra cerrada!',
+      });
     }
   };
 
   const clearLabels = () => {
     if (labelContainerRef.current) {
-      labelContainerRef.current.innerHTML = ""; // Limpiar el contenido del contenedor de etiquetas
+      labelContainerRef.current.innerHTML = "";
     }
   };
 
@@ -293,9 +306,6 @@ const EnvivoComponent = () => {
         if (requestId) {
           window.cancelAnimationFrame(requestId);
         }
-        // if (webcam) {
-        //   webcam.stop();
-        // }
       };
     }
     init();
@@ -339,15 +349,15 @@ const EnvivoComponent = () => {
         <Container style={{ marginTop: '20px'}}>
         <Message warning>
           <MessageHeader>A tener en cuenta!</MessageHeader>
-          <p>♦ La precisión del resultado del modelo va a depender en gran medida de la calidad de imágen (o fotografía) que le proporciones.
+          <p>♦   La precisión del resultado del modelo va a depender en gran medida de la calidad de imágen (o fotografía) que le proporciones.
           </p>
-          <p>♦ Si estas presentando inconvenientes siempre ten en consideración recargar la página (valido tambien para el reconocimiento por fotografía) o hacer clic en el boton Abrir Cámara.
+          <p>♦   Si estas presentando inconvenientes siempre ten en consideración recargar la página (valido tambien para el reconocimiento por fotografía) o hacer clic en el boton Abrir Cámara.
           </p>
-          <p>♦ Para garantizar el mejor funcionamiento del sistema, se recomienda recargar la página y oprimir el boton Cerrar Cámara en caso
+          <p>♦   Para garantizar el mejor funcionamiento del sistema, se recomienda recargar la página y oprimir el boton Cerrar Cámara en caso
             de querer salir del reconocimiento en vivo hacia otro apartado.
           </p>
         </Message>
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
         </Container>
       </Sidebar.Pusher>
     </Sidebar.Pushable>
@@ -355,4 +365,3 @@ const EnvivoComponent = () => {
 };
 
 export default EnvivoComponent;
-

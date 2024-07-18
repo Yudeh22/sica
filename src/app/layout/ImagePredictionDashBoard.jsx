@@ -48,7 +48,7 @@ const ImagePredictionDashBoard = () => {
           <Header as={"h1"}>Clasificación por Imagen</Header>
           <SearchBox setSearchState={setSearchState} />
           <Preview searchState={searchState}></Preview>
-          <br /><br /><br /><br /><br /><br />
+          <br /><br /><br /><br /><br /><br /><br /><br />
         </Container>
       </Sidebar.Pusher>
     </Sidebar.Pushable>

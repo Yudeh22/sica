@@ -30,7 +30,7 @@ const EspeciesComponent = () => {
     <Sidebar.Pushable style={{ minHeight: "100vh" }}>
       <CustomSidebar visible={sidebarVisible} onHide={() => setSidebarVisible(false)} />
       <Sidebar.Pusher dimmed={sidebarVisible}>
-        <Menu fixed="top" style={{ backgroundColor: "#14539A", borderBottom: "5px solid #14539A" }}>
+        <Menu fixed="top" style={{ backgroundColor: "#14539A", borderBottom: "5px solid #14539A", width: '100%', zIndex: 1000 }}>
         <Menu.Item onClick={handleSidebarToggle} style={{ fontSize: '20px', color: '#f9fafb' }}>
           <Icon name="sidebar" style={{ color: "#f9fafb" }} />
           Sistema Clasificador de Atunes                   
@@ -41,7 +41,7 @@ const EspeciesComponent = () => {
             onClick={handleIconClick}
         /> */}
 
-      <img src="/atun/logex/3.png" alt="Mi Icono" style={{ height: '51px', marginLeft: '880px', marginTop: '10px' }} onClick={handleIconClick}/>
+      <img src="/atun/logex/3.png" alt="Mi Icono" style={{ height: '54px', marginLeft: 'auto', marginTop: '10px' }} onClick={handleIconClick}/>
 
         </Menu>
 

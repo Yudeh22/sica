@@ -35,11 +35,14 @@ const EspeciesComponent = () => {
           <Icon name="sidebar" style={{ color: "#f9fafb" }} />
           Sistema Clasificador de Atunes                   
         </Menu.Item>
-        <Icon
+        {/* <Icon
             name="home"
             style={{ fontSize: '37px', color: '#f9fafb' , marginLeft: '860px' , marginTop: '18px'}}
             onClick={handleIconClick}
-        />
+        /> */}
+
+      <img src="/atun/logex/3.png" alt="Mi Icono" style={{ height: '51px', marginLeft: '880px', marginTop: '10px' }} onClick={handleIconClick}/>
+
         </Menu>
 
         <Container style={{ marginLeft: "20px" }}>

@@ -24,11 +24,11 @@ const CustomSidebar = ({ visible, onHide }) => {
       </Menu.Item>
       <Menu.Item as={Link} to="/info" onClick={onHide}>
         <Icon name="info" />
-        Información del proyecto
+        Información del Proyecto
       </Menu.Item>
       <Menu.Item as={Link} to="/envivo" onClick={onHide}>
         <Icon name="video" />
-        Reconocimiento en vivo
+        Reconocimiento en Vivo
       </Menu.Item>
       <Menu.Item as={Link} to="/especies" onClick={onHide}>
         <Icon name="joget" />

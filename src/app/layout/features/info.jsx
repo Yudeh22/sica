@@ -52,7 +52,7 @@ const panes = [
                 <p>
                   El modelo de reconocimiento es capaz de diferenciar hasta ocho tipos de especies de<br/>  
                   atunes (las especies con mas presencia en nuestra región). Para probar solo el modelo<br/>  
-                  haz <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"> clic aquí.</a>
+                  haz <a href="https://teachablemachine.withgoogle.com/models/3-S1t9wTc/" target="_blank" rel="noopener noreferrer"> clic aquí.</a>
                 </p>
               </ItemDescription>
             </ItemContent>
@@ -176,15 +176,14 @@ const InfoComponent = () => {
               </Button>
             </ModalActions>
           </Modal>
-          <Icon name="home" 
-          style={{ fontSize: '37px', color: '#f9fafb', marginLeft: '40px', marginTop: '20px' }}
-          onClick={handleIconClick}
+          {/* <Icon name="home" style={{ fontSize: '37px', color: '#f9fafb', marginLeft: '40px', marginTop: '20px' }}onClick={handleIconClick}/> */}
 
-           />
+          <img src="/atun/logex/3.png" alt="Mi Icono" style={{ height: '51px', marginLeft: '60px', marginTop: '10px' }} onClick={handleIconClick}/>
+
         </Menu>
         <Container style={{ marginLeft: "20px" }}>
           <br /><br /> <br /> <br />
-          <Header as={"h1"}>Información del proyecto</Header>
+          <Header as={"h1"}>Información del Proyecto</Header>
           <select onChange={handleColorChange}>
             {_.map(colors, (c) => (
               <option key={c} value={c}>

@@ -171,10 +171,11 @@ const SearchBox = ({ setSearchState }) => {
           <Button
             as="div"
             labelPosition="right"
-            content="Subir imagen"
+            content="Subir imágen"
             icon="file"
             onClick={() => {}}
-            color="olive"
+            // color="olive"
+            style={{ backgroundColor: "grey", color: "#ffffff", marginBottom: '10px' }}
           />
         </label>
       </GridColumn>

@@ -14,7 +14,7 @@ const LoginForm = () => {
     // Por ejemplo, haciendo una petición HTTP a tu servidor
 
     // Aquí solo se muestra un ejemplo simple de validación
-    if (email === 'ictiologia' && password === '123456') {
+    if (email === 'ictiologia' && password === 'ictio2024') {
       // Si las credenciales son correctas, redirige al dashboard
       navigate('/dashboard');
     } else {

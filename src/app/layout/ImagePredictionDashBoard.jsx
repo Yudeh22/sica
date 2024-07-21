@@ -84,16 +84,16 @@ const ImagePredictionDashBoard = () => {
           <Menu.Item onClick={handleSidebarToggle} style={{ fontSize: '20px', color: '#f9fafb' }}>
             <Icon name="sidebar" style={{ color: "#f9fafb" }} /> Sistema Clasificador de Atunes
           </Menu.Item>
-          <Modal onClose={() => setOpen(false)} onOpen={() => setOpen(true)} open={open} trigger={<Button style={{ marginLeft: '700px',marginTop: '11px', backgroundColor: 'red', height: '40px', padding: '10px' }}><Icon name="file video" /> Guia de Uso</Button>}>
+          <Modal onClose={() => setOpen(false)} onOpen={() => setOpen(true)} open={open} trigger={<Button style={{ marginLeft: '700px',marginTop: '11px', backgroundColor: 'red', height: '40px', padding: '10px' }}><Icon name="file video" /> Guía de uso</Button>}>
             <ModalHeader>Video Tutorial</ModalHeader>
             <ModalContent>
               <iframe width="580" height="335" src="https://www.youtube.com/embed/IPPMUAQmKnY?si=RSOYkKjzp7S1FyW6" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
               <ModalDescription>
-                <br/>
+                {/* <br/>
                 <h3>Manual de Usuario</h3>
                 <p>
                   Para leer el manual de usuario haz <a href="https://sica.yudeh.com/" target="_blank" rel="noopener noreferrer"> clic aquí.</a>
-                </p>
+                </p> */}
               </ModalDescription>
             </ModalContent>
             <ModalActions>
@@ -103,7 +103,7 @@ const ImagePredictionDashBoard = () => {
               </Button>
             </ModalActions>
           </Modal>
-          <img src="/atun/logex/3.png" alt="Mi Icono" style={{ height: '51px', marginLeft: '60px', marginTop: '10px' }} />
+          <img src="/atun/logex/3.png" alt="Mi Icono" style={{ height: '51px', marginLeft: '62px', marginTop: '10px' }} />
           {/* <Icon name="home" style={{ fontSize: '37px', color: '#f9fafb', marginLeft: '40px', marginTop: '20px' }} /> */}
         </Menu>
         <Container style={{ marginLeft: "20px" }}>

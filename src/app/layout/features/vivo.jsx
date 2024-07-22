@@ -1309,7 +1309,7 @@ const EnvivoComponent = () => {
       Swal.fire({
         icon: 'error',
         title: 'Error',
-        text: '¡La cámara ya se encuentra cerrada!',
+        text: 'La cámara ya se encuentra cerrada!',
       });
     }
   };
@@ -1325,14 +1325,14 @@ const EnvivoComponent = () => {
   const downloadCSV = () => {
     if (history.length === 0) {
       Swal.fire({
-        icon: 'warning',
-        title: 'Sin Datos',
-        text: 'No hay ninguna imagen en el historial para descargar.',
+        icon: 'info',
+        title: 'Historial vacío',
+        text: 'No hay predicciones para descargar',
       });
       return;
     }
 
-    const headers = ["ID", "Especie", "Probabilidad", "Fecha"];
+    const headers = ["ID", "Especie", "Probabilidad", "Fecha", "Hora"];
     const rows = history.map(item => {
       const [species, probability] = item.prediction.split(": ");
       return [item.id, species, probability, item.timestamp];
@@ -1345,7 +1345,7 @@ const EnvivoComponent = () => {
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement("a");
     link.setAttribute("href", encodedUri);
-    link.setAttribute("download", "historial_de_predicciones.csv");
+    link.setAttribute("download", "historial_de_predicciones_en_vivo.csv");
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -1479,7 +1479,7 @@ const EnvivoComponent = () => {
         </Container>
 
         <Container style={{ marginTop: '30px' }}>
-          <Header as="h2" textAlign="left">Historial de Predicciones</Header>
+          <Header as="h2" textAlign="left">Historial de Imágenes</Header>
           <Button primary onClick={downloadCSV} style={{ marginTop: '20px', marginBottom: '20px' }}>Descargar historial</Button>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'center' }}>
             {history.length > 0 ? (

@@ -178,7 +178,7 @@ const Preview = ({ searchState }) => {
         if (link.download !== undefined) {
             const url = URL.createObjectURL(blob);
             link.setAttribute("href", url);
-            link.setAttribute("download", "prediccion_especies.csv");
+            link.setAttribute("download", "historial_prediccion_especies.csv");
             link.style.visibility = 'hidden';
             document.body.appendChild(link);
             link.click();

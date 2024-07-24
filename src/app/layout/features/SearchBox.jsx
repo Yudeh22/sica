@@ -167,7 +167,7 @@ const SearchBox = ({ setSearchState }) => {
           style={{ display: "none" }}
           id="fileInput"
         />
-        <label htmlFor="fileInput" style={{ marginLeft: "10px" }}>
+        <label htmlFor="fileInput" style={{ marginLeft: "44px" }}>
           <Button
             as="div"
             labelPosition="right"

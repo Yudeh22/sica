@@ -30,6 +30,10 @@ const CustomSidebar = ({ visible, onHide }) => {
         <Icon name="video" />
         Reconocimiento en Vivo
       </Menu.Item>
+      <Menu.Item as={Link} to="/envivocell" onClick={onHide}>
+        <Icon name="mobile alternate" />
+        Rec. en Vivo (Móviles)
+      </Menu.Item>
       <Menu.Item as={Link} to="/especies" onClick={onHide}>
         <Icon name="joget" />
         Especies

@@ -64,7 +64,7 @@ import { BotellaComponent } from './features/infoespecies/botella';
 import { AletaComponent } from './features/infoespecies/aletamarilla';
 import { PatudoComponent } from './features/infoespecies/patudo';
 import LoginForm from './Sesion' 
-
+import EnvivoComponentCell from './features/vivocell';
 
 
 function App() {
@@ -76,6 +76,7 @@ function App() {
         <Route exact path="/dashboard" element={<ImagePredictionDashBoard />} />
         <Route exact path="/info" element={<InfoComponent />} />
         <Route exact path="/envivo" element={<EnvivoComponent />} />
+        <Route exact path="/envivocell" element={<EnvivoComponentCell />} />
         <Route exact path="/especies" element={<EspeciesComponent />} />
         <Route exact path="/especies/wahoo" element={<WahooComponent />} />
         <Route exact path="/especies/pataseca" element={<PatasecaComponent />} />

@@ -191,7 +191,7 @@ const EnvivoComponentCell = () => {
         Swal.fire({
           icon: 'error',
           title: 'Error de acceso a la cámara',
-          text: 'No se pudo acceder a la cámara. Por favor, asegúrate de que tu dispositivo tiene una cámara y que has dado los permisos necesarios.',
+          text: 'Esta interfaz solo permite acceder a la cámara trasera de tu celular.',
         });
         console.error("Error accessing camera:", error);
       }
@@ -275,7 +275,7 @@ const EnvivoComponentCell = () => {
             
           </div>
 
-          <br /><br /><br /><br /><br /><br /><br />
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         </Container>
       </Sidebar.Pusher>
     </Sidebar.Pushable>
